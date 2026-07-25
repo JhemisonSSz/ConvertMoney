@@ -21,7 +21,7 @@ O objetivo do projeto é oferecer uma interface amigável para que o usuário po
 
 ---
 
-## 🔧 Conheça o Projeto
+## 🔧 Acesse o Projeto
    [Clique aqui para testar](https://jhemisonssz.github.io/ConvertMoney/)
 
 ---
@@ -50,6 +50,6 @@ English description
 
 ---
 
-## 🔧 Check Out the Project
+## 🔧 acess the Project
 
    [Click here to test](https://jhemisonssz.github.io/ConvertMoney/)
