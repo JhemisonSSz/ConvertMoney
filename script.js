@@ -1,5 +1,4 @@
 const currencySelect01 = document.querySelector('.currency-select-01')
-
 const currencySelect02 = document.querySelector('.currency-select-02')
 const convertButton = document.querySelector('.convert-button')
 
