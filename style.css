@@ -8,62 +8,71 @@
 
 body {
     background: #00A174;
+    padding: 20px;
 }
 
 .logo {
-    width: 200px;
     display: block;
-    margin: 10px auto;
+    max-width: 100%;
+    width: 200px;
+    margin: 10px auto 20px;
+    height: auto;
 }
 
 main {
+    max-width: 100%;
     width: 1000px;
     border-radius: 20px;
-    background: #F4F4F4;
-    margin: 0 auto 20px;
-    padding: 25px 24px 25px;
+    margin: 0 auto;
+    padding: clamp(15px, 4vw, 25px);
     background-color: #B3DE7F;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 label {
     font-weight: 700px;
-    font-size: 14px;
+    font-size: clamp(0.875rem, 1vw + 0.6rem, 1rem);
     color: #777777;
+    display: block;
+    margin-bottom: 6px;
 }
 
 select {
     width: 100%;
-    height: 30px;
-    border: 1px solid #BBBBBB;
+    height: 40px;
+    border: none;
     border-radius: 4px;
-    background: #FFFFFF;
+    background: #00A174;
+    text-align: center;
     padding-left: 18px;
-    font-weight: 700px;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: clamp(1rem, 0.4vw + 0.9rem, 1.125rem);
     color: #555555;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border-radius: 4px;
-    border: 1px solid #BBBBBB;
-    padding-left: 18px;
-    margin-bottom: 23px;
+    border: none;
+    padding-left: 0 18px;
+    background-color: #00A174;
+    text-align: center;
+    font-size: 1rem;
 }
 
 button {
     width: 100%;
-    height: 30px;
+    height: 45px;
     border-radius: 5px;
     border: none;
-    background: #00A174;
+    background: #772fd3;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 18px;
-    color: #555555;
+    font-size: clamp(1rem, 0.4vw + 0.9rem, 1.125rem);
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -78,45 +87,75 @@ button:active {
 section {
     width: 100%;
     border-radius: 20px;
-    border: 1px solid #00A174;
-    padding: 12px;
-    margin-top: 23px;
+    border: 5px solid #00A174;
+    padding: 20px 12px;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
 
 .currency-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    text-align: center;
+    flex: 1;
 }
 
-.currency-convert-img {
+.currency-convert-img, .currency-converted-img {
+    max-width: 100%;
     width: 50px;
-    height: 50px;
+    height: auto;
+    margin-bottom: 8px;
 }
 
 .arrow-img {
-    margin: 12px 0;
+    max-width: 100%;
     width: 30px;
-    height: 49px;
-}
-
-.currency-converted-img {
-    width: 50px;
-    height: 50px;
+    height: auto;
 }
 
 .currency {
-    font-weight: 400px;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     color: #777777;
+    margin-bottom: 4px;
 }
 
 .currency-value-to-convert .currency-value {
-    font-weight: 700px;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 0.4vw + 1rem, 1.25rem);
     color: #555555;
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    section {
+        gap: 10px;
+        
+    }
+
+    .arrow-img {
+        margin: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .arrow-img {
+        transform: rotate(90deg);
+        width: 30px;
+        margin: 5px 0;
+    }
 }
